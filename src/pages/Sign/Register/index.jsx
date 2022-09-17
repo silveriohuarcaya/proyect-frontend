@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../App.scss'
-import useForm from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import silueta from '../../../images/silueta.png'
 import candado from '../../../images/candado.jpeg'
 import correo from '../../../images/correo.png'
