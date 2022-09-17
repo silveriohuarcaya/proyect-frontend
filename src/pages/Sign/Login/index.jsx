@@ -1,10 +1,9 @@
 import React from 'react'
-import useForm from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import silueta from '../../../images/silueta.png'
 import candado from '../../../images/candado.jpeg'
-import login from '../../../images/login.jpeg'
-// import useForm from '../../../hooks/useForm'
+import login from '../../../images/login1.png'
 import '../../../App.scss'
 
 const Login = () => {
@@ -16,7 +15,13 @@ const Login = () => {
     <div className="App">
       <main>
         <div className="login-block">
-          <img src={login} width="160" height="160" alt="username" />
+          <img
+            src={login}
+            opacity="0.5"
+            width="260"
+            height="160"
+            alt="username"
+          />
           <form>
             <div className="form-group">
               <div className="input-group">
