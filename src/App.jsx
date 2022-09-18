@@ -1,5 +1,8 @@
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d2b3044 (Develop (#4))
 
 import Navbar from './components/Navbar'
 // import ProductList from './components/ProductList'
@@ -18,6 +21,7 @@ const App = () => (
       </div>
     </div>
   </>
+<<<<<<< HEAD
 =======
 import logo from './logo.svg'
 import './App.css'
@@ -40,6 +44,8 @@ const App = () => (
     </header>
   </div>
 >>>>>>> 4c6e588 (modify *.jsx)
+=======
+>>>>>>> d2b3044 (Develop (#4))
 )
 
 export default App
