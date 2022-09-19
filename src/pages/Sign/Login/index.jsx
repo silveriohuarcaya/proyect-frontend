@@ -1,10 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
-import silueta from '../../../images/silueta.png'
-import candado from '../../../images/candado.jpeg'
-import login from '../../../images/login1.png'
-import '../../../App.scss'
+
+import './index.scss'
 
 const Login = () => {
   const { form, handleOnchange } = useForm({})
@@ -14,55 +11,54 @@ const Login = () => {
   return (
     <div className="App">
       <main>
-        <div className="login-block">
-          <img
-            src={login}
-            opacity="0.5"
-            width="260"
-            height="160"
-            alt="username"
-          />
-          <form>
-            <div className="form-group">
-              <div className="input-group">
-                <span className="input-group-addon">
-                  <img src={silueta} width="30" height="30" alt="username" />
-                </span>
-                <input
-                  name="username"
-                  type="text"
-                  className="form-control"
-                  placeholder="Username"
-                  onChange={handleOnchange}
-                />
+        <div className="container">
+          <div className="card">
+            <form>
+              <div className="top-row background-top-row">
+                <i className="fa fa-user-circle-o" aria-hidden="true" />
               </div>
-            </div>
-            <div className="form-group">
-              <div className="input-group">
-                <span className="input-group-addon">
-                  <img src={candado} width="35" height="35" alt="password" />
-                </span>
-                <input
-                  name="password"
-                  type="password"
-                  className="form-control"
-                  placeholder="Password"
-                  onChange={handleOnchange}
-                />
+              <div className="content">
+                <i className="fa fa-lock" aria-hidden="true" />
+                <h1>Login</h1>
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>User</p>
+                    <input
+                      type="text"
+                      className="text"
+                      name="UserName"
+                      id=""
+                      placeholder="Username"
+                      onChange={handleOnchange}
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>Password</p>
+                    <input
+                      type="password"
+                      className="text"
+                      name="UserPassword"
+                      id=""
+                      placeholder="Password"
+                      onChange={handleOnchange}
+                    />
+                  </div>
+                </div>
+
+                <button className="button" type="submit">
+                  Login
+                </button>
               </div>
-            </div>
-            <button className="btn btn-primary btn-block" type="submit">
-              Login
-            </button>
-          </form>
-        </div>
-        <div className="login-links">
-          <Link to="/" className="pull-left">
-            Forget Password?
-          </Link>
-          <Link to="/" className="pull-right">
-            Register an account
-          </Link>
+              <div className="networks background-top-row">
+                <i className="fa fa-facebook" aria-hidden="true" />
+                <i className="fa fa-google" aria-hidden="true" />
+                <i className="fa fa-instagram" aria-hidden="true" />
+              </div>
+            </form>
+          </div>
         </div>
       </main>
     </div>
