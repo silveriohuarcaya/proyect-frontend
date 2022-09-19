@@ -12,8 +12,9 @@ const App = () => (
     <div className="container">
       <div className="shopping-container">{/* <ShoppingCart /> */}</div>
       <div>
+        {/*
         <h1>Product List</h1>
-        {/* <ProductList /> */}
+        <ProductList /> */}
       </div>
     </div>
   </>
