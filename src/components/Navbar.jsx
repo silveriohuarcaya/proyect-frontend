@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
 // import Badge from './Badge'
 
 const Navbar = () => (
   <div>
     <nav>
-      <div className="container">
+      <div className="container-navbar">
         <ul className="navbar-left">
           <li>
             <Link to="/">Home</Link>
