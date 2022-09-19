@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './index.scss'
-import { login } from '../../../services/auth'
+// import { login } from '../../../services/auth'
 
 const Login = () => {
   const [form, setForm] = useState({})
