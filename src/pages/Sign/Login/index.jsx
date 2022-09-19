@@ -20,38 +20,38 @@ const Login = () => {
               <div className="content">
                 <i className="fa fa-lock" aria-hidden="true" />
                 <h1>Login</h1>
-              </div>
-              <div className="form-group">
-                <div className="input-group">
-                  <p>User</p>
-                  <input
-                    type="text"
-                    className="text"
-                    name="UserName"
-                    id=""
-                    placeholder="UserName"
-                    onChange={handleOnchange}
-                  />
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>User</p>
+                    <input
+                      type="text"
+                      className="text"
+                      name="UserName"
+                      id=""
+                      placeholder="Username"
+                      onChange={handleOnchange}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="form-group">
-                <div className="input-group">
-                  <p>Password</p>
-                  <input
-                    type="password"
-                    className="text"
-                    name="UserPassword"
-                    id=""
-                    placeholder="UserName"
-                    onChange={handleOnchange}
-                  />
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>Password</p>
+                    <input
+                      type="password"
+                      className="text"
+                      name="UserPassword"
+                      id=""
+                      placeholder="Password"
+                      onChange={handleOnchange}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <button className="buton" type="submit">
-                Login
-              </button>
+                <button className="button" type="submit">
+                  Login
+                </button>
+              </div>
               <div className="networks background-top-row">
                 <i className="fa fa-facebook" aria-hidden="true" />
                 <i className="fa fa-google" aria-hidden="true" />

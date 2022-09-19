@@ -1,3 +1,7 @@
+:root {
+  --white-text: #fff;
+}
+
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
 * {
@@ -11,19 +15,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: rgb(174, 58, 180);
-  background: lineargradient(
-    90deg,
-    rgba(174, 58, 180, 1) 0%,
-    rgba(63, 190, 251, 1) 50%,
-    rgba(174, 58, 180, 1) 100%
-  );
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  height: 100vh;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -33,15 +31,15 @@ body {
   flex-direction: column;
   margin: 1.5rem;
   overflow: hidden;
-  width: 25rem;
-  height: 35rem;
+  width: 20rem;
+  height: 25rem;
   backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(235, 13, 13, 0.06);
   color: var(--white-text);
 }
 
 .top-row {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,43 +47,44 @@ body {
 }
 
 .top-row i {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .content {
-  padding: 2rem;
+  padding: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  height: 70%;
 }
 
 .content i {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .content p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   align-self: flex-start;
 }
 
 .text {
   width: 100%;
-  height: 3rem;
+  height: 2rem;
   color: rgb(97, 94, 94);
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  padding: 1rem;
 }
 
 .button {
   border-radius: 3rem;
   color: var(--white-text);
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.5rem 0.3rem;
   letter-spacing: 0.1rem;
-  background-color: rgba(174, 58, 180, 0.3);
-  width: 50%;
-  height: 3rem;
+  background-color: rgba(40, 151, 51, 0.879);
+  width: 30%;
+  height: 2rem;
 }
 
 .networks {
@@ -93,13 +92,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 /* media queries */
 @media (max-width: 1030px) {
   .container {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: auto;
