@@ -1,68 +1,77 @@
 import React from 'react'
-import '../../../App.scss'
 import { useForm } from 'react-hook-form'
-import silueta from '../../../images/silueta.png'
-import candado from '../../../images/candado.jpeg'
-import correo from '../../../images/correo.png'
-import registro from '../../../images/registro.jpeg'
-// import useForm from '../../../hooks/useForm'
+
+import './index.scss'
 
 const Register = () => {
   const { form, handleOnchange } = useForm({})
+
   console.log('form', form)
 
   return (
     <div className="App">
       <main>
-        <div className="login-block">
-          <img src={registro} width="180" height="180" alt="username" />
-          <form>
-            <div className="form-group">
-              <div className="input-group">
-                <span>
-                  <img src={silueta} width="30" height="30" alt="username" />
-                </span>
-                <input
-                  name="username"
-                  type="text"
-                  className="form-control"
-                  placeholder="Username"
-                  onChange={handleOnchange}
-                />
+        <div className="container">
+          <div className="card-register">
+            <form>
+              <div className="top-row background-top-row">
+                <i className="fa fa-user-circle-o" aria-hidden="true" />
               </div>
-            </div>
-            <div className="form-group">
-              <div className="input-group">
-                <span>
-                  <img src={correo} width="30" height="30" alt="password" />
-                </span>
-                <input
-                  name="email"
-                  type="email"
-                  className="form-control"
-                  placeholder="Email"
-                  onChange={handleOnchange}
-                />
+              <div className="content">
+                <i className="fa fa-lock" aria-hidden="true" />
+                <h1>Register</h1>
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>User</p>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="UserName"
+                      id=""
+                      placeholder="Username"
+                      onChange={handleOnchange}
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>Email</p>
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="email"
+                      id=""
+                      placeholder="Email"
+                      onChange={handleOnchange}
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <div className="input-group">
+                    <p>Password</p>
+                    <input
+                      type="password"
+                      className="form-control"
+                      name="password"
+                      id=""
+                      placeholder="Password"
+                      onChange={handleOnchange}
+                    />
+                  </div>
+                </div>
+
+                <button className="button" type="submit">
+                  Register
+                </button>
               </div>
-            </div>
-            <div className="form-group">
-              <div className="input-group">
-                <span>
-                  <img src={candado} width="35" height="35" alt="password" />
-                </span>
-                <input
-                  name="password"
-                  type="password"
-                  className="form-control"
-                  placeholder="Password"
-                  onChange={handleOnchange}
-                />
+              <div className="networks background-top-row">
+                <i className="fa fa-facebook" aria-hidden="true" />
+                <i className="fa fa-google" aria-hidden="true" />
+                <i className="fa fa-instagram" aria-hidden="true" />
               </div>
-            </div>
-            <button className="btn btn-primary btn-block" type="submit">
-              Register
-            </button>
-          </form>
+            </form>
+          </div>
         </div>
       </main>
     </div>

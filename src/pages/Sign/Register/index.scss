@@ -24,7 +24,7 @@ body {
   justify-content: center;
 }
 
-.card {
+.card-register {
   border-radius: 1rem;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
@@ -32,7 +32,7 @@ body {
   margin: 1.5rem;
   overflow: hidden;
   width: 20rem;
-  height: 25rem;
+  height: 27rem;
   backdrop-filter: blur(1rem);
   background-color: rgba(235, 13, 13, 0.06);
   color: var(--white-text);
@@ -83,7 +83,7 @@ body {
   padding: 0.5rem 0.3rem;
   letter-spacing: 0.1rem;
   background-color: rgba(40, 151, 51, 0.879);
-  width: 30%;
+  width: 40%;
   height: 2rem;
 }
 
