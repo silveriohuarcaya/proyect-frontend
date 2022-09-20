@@ -1,4 +1,4 @@
-const BASE_URL = `${process.env.REACT_APP_APT_BASE_URL}/api`
+const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}`
 
 export async function login(auth) {
   const options = {

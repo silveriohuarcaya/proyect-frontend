@@ -1,16 +1,26 @@
 import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './index.scss'
-// import { login } from '../../../services/auth'
+import { login } from '../../../services/auth'
 
 const Login = () => {
+  const navigate = useNavigate()
   const [form, setForm] = useState({})
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(form)
+    try {
+      const response = await login(form)
+      const { token, profile } = response
+      localStorage.setItem('token', token)
+      localStorage.setItem('profile', JSON.stringify(profile))
+      navigate('/')
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -27,12 +37,12 @@ const Login = () => {
                 <h1>Login</h1>
                 <div className="form-group">
                   <div className="input-group">
-                    <p>User</p>
+                    <p>Email</p>
                     <input
-                      type="text"
+                      type="email"
                       className="form-control"
-                      name="username"
-                      placeholder="Username"
+                      name="email"
+                      placeholder="Email"
                       onChange={handleChange}
                     />
                   </div>
@@ -56,9 +66,15 @@ const Login = () => {
                 </button>
               </div>
               <div className="networks background-top-row">
-                <i className="fa fa-facebook" aria-hidden="true" />
-                <i className="fa fa-google" aria-hidden="true" />
-                <i className="fa fa-instagram" aria-hidden="true" />
+                <Link to="/">
+                  <i className="fa fa-facebook" aria-hidden="true" />
+                </Link>
+                <Link to="/">
+                  <i className="fa fa-google" aria-hidden="true" />
+                </Link>
+                <Link to="/">
+                  <i className="fa fa-instagram" aria-hidden="true" />
+                </Link>
               </div>
             </form>
           </div>
