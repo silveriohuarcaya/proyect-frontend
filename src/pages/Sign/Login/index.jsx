@@ -1,19 +1,24 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-
+import React, { useState } from 'react'
 import './index.scss'
+// import { login } from '../../../services/auth'
 
 const Login = () => {
-  const { form, handleOnchange } = useForm({})
+  const [form, setForm] = useState({})
 
-  console.log('form', form)
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(form)
+  }
 
   return (
     <div className="App">
       <main>
         <div className="container">
           <div className="card">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="top-row background-top-row">
                 <i className="fa fa-user-circle-o" aria-hidden="true" />
               </div>
@@ -25,11 +30,10 @@ const Login = () => {
                     <p>User</p>
                     <input
                       type="text"
-                      className="text"
-                      name="UserName"
-                      id=""
+                      className="form-control"
+                      name="username"
                       placeholder="Username"
-                      onChange={handleOnchange}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -39,11 +43,10 @@ const Login = () => {
                     <p>Password</p>
                     <input
                       type="password"
-                      className="text"
-                      name="UserPassword"
-                      id=""
+                      className="form-control"
+                      name="password"
                       placeholder="Password"
-                      onChange={handleOnchange}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
